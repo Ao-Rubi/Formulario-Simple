@@ -7,7 +7,7 @@ const Formulario = () => {
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control type="email" placeholder="Email" />
                     <Form.Text className="text-muted">
                     We'll never share your email with anyone else.
                     </Form.Text>
@@ -15,7 +15,7 @@ const Formulario = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
+                    <Form.Control type="password" placeholder="Contraseña" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicCheckbox"> 
