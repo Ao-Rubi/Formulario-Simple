@@ -1,30 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form, Button} from 'react-bootstrap';
 
 const Formulario = () => {
+    const [nombre, setNombre] = useState("");
+    const [apellido, setApellido] = useState("");
+    const [DNI, setDNI] = useState("");
+    const [email, setEmail] = useState("");
+
     return (
-        <div>
+        <div className='py-4 px-3'>
             <Form>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
+                <Form.Group className="mb-3">
+                    <Form.Label>Nombre</Form.Label>
+                    <Form.Control type="text" placeholder="Nombre" />
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                    <Form.Label>Apellido</Form.Label>
+                    <Form.Control type="text" placeholder="Apellido" />
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                    <Form.Label>DNI</Form.Label>
+                    <Form.Control type="text" placeholder="DNI" />
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                    <Form.Label>Email</Form.Label>
                     <Form.Control type="email" placeholder="Email" />
-                    <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                    </Form.Text>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Contraseña" />
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicCheckbox"> 
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
+                <Button variant="primary" type="submit">Submit</Button>
             </Form>
         </div>
     );
