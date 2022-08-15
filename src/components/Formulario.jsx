@@ -20,22 +20,28 @@ const Formulario = () => {
         setValidated(true);
     }
 
+    // const validacion = (value) => {
+    //     const pattern = /^w+[+.w-]*@([w-]+.)*w+[w-]*.([a-z]{2,4}|d+)$/i;
+    //     console.log(value.test(pattern))
+    //     return value.test(pattern)
+    // }
+
     return (
         <div className='py-4 px-3'>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
                 <Form.Group className="mb-3">
                     <Form.Label>Nombre</Form.Label>
-                    <Form.Control onChange={(e)=> { setNombre(e.target.value)}} type="text" placeholder="Nombre" required/>
+                    <Form.Control onChange={(e)=> { setNombre(e.target.value)}} type="text" placeholder="Nombre" required minLength={2}/>
                 </Form.Group>
 
                 <Form.Group className="mb-3">
                     <Form.Label>Apellido</Form.Label>
-                    <Form.Control type="text" placeholder="Apellido" required/>
+                    <Form.Control type="text" placeholder="Apellido" required minLength={2}/>
                 </Form.Group>
 
                 <Form.Group className="mb-3">
                     <Form.Label>DNI</Form.Label>
-                    <Form.Control type="number" placeholder="DNI" required/>
+                    <Form.Control type="number" placeholder="DNI" required minLength={8}/>
                 </Form.Group>
 
                 <Form.Group className="mb-3">
