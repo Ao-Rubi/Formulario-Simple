@@ -8,4 +8,5 @@ Formulario simple, se llenan los campos y se verifican si estan o no completos y
 Garcia Mauro Nicolas
 
 ### Librerias
-- react Bootstrap
+- React
+- React-bootstrap v5.2.0
