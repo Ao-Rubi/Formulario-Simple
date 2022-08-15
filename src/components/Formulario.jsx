@@ -9,8 +9,8 @@ const Formulario = () => {
     const DNI = document.getElementById("DNI");
     const email = document.getElementById("email");
 
-    const validacionCheck = (e) => {
-        e.preventDefault();
+    const validacionCheck = () => {
+
         if (cantidadCaracteres(2,15, nombre) && cantidadCaracteres(2,15, apellido) && validarDNI(DNI) && validarEmail(email)) {
             alert("Formulario completo")
         }else{
@@ -23,22 +23,22 @@ const Formulario = () => {
             <form onSubmit={validacionCheck}>
                 <div className="mb-3">
                     <label htmlFor='nombre'>Nombre</label>
-                    <input id='nombre' className='form-control' onChange={()=> {cantidadCaracteres(2,15, nombre);}} type="text" placeholder="Nombre"  minLength={2} maxLength={15}/>
+                    <input id='nombre' className='form-control' onChange={()=> {cantidadCaracteres(2,15, nombre)}} type="text" placeholder="Nombre" required minLength={2} maxLength={15}/>
                 </div>
 
                 <div className="mb-3">
                     <label htmlFor='apellido'>Apellido</label>
-                    <input id='apellido' className='form-control' onChange={()=> {cantidadCaracteres(2,15, apellido)}} type="text" placeholder="Apellido"  minLength={2}/>
+                    <input id='apellido' className='form-control' onChange={()=> {cantidadCaracteres(2,15, apellido)}} type="text" placeholder="Apellido" required  minLength={2} maxLength={15}/>
                 </div>
 
                 <div className="mb-3">
                     <label htmlFor='DNI'>DNI</label>
-                    <input id='DNI' className='form-control' onChange={()=> {validarDNI(DNI)}} type="number" placeholder="DNI"  minLength={8} maxLength={8}/>
+                    <input id='DNI' className='form-control' onChange={()=> {validarDNI(DNI)}} type="number" placeholder="DNI" required  minLength={8} maxLength={8}/>
                 </div>
 
                 <div className="mb-3">
                     <label htmlFor='email'>Email</label>
-                    <input id='email' className='form-control' onChange={()=> {validarEmail(email)}} type="email" placeholder="Email" />
+                    <input id='email' className='form-control' onChange={()=> {validarEmail(email)}} type="email" placeholder="Email" required />
                 </div>
 
                 <Button variant="primary" type="submit">Submit</Button>
