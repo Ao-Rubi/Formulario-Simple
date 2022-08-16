@@ -10,7 +10,6 @@ const Formulario = () => {
     const email = document.getElementById("email");
 
     const validacionCheck = () => {
-
         if (cantidadCaracteres(2,15, nombre) && cantidadCaracteres(2,15, apellido) && validarDNI(DNI) && validarEmail(email)) {
             alert("Formulario completo")
         }else{
